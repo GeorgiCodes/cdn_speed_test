@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title> The simplest HTML example
+    </title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <script>
+      io = io.connect()
+      // Send the ready event.
+      io.emit('ready')
+      // Listen for the talk event.
+      io.on('talk', function(data) {
+          $("#results").append(data.message);
+      })
+    </script>
+    <h1>CDN Speed Test!</h1>
+    <p>Comparing the three most popular CDN speeds for jQuery1.9</p>
+    <ul>
+      <li>jquery - http://code.jquery.com/jquery-1.9.1.min.js</li>
+      <li>google -  http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js</li>
+      <li>microsoft - http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js</li>
+    </ul>
+    <hr>
+    <div id="results"><div>
+    <!-- <form action="/go">
+      <button type="submit">GO!</button>
+    </form> -->
+  </body>
+</html>
