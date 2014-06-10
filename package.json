@@ -1,0 +1,9 @@
+{
+  "name": "cdn_speed_test",
+  "description": "simple app to test the speed of popular CDNs for jQuery",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "4.x"
+  }
+}
